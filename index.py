@@ -144,6 +144,7 @@ async def fetch_and_process_data(item, session):
     except asyncio.TimeoutError:
         return f"Timeout for item {item}"
     except Exception as e:
+        print("오류가 발생했습니다. 계속해서 발생할 경우 API 키를 확인해주세요...")
         return f"Error for item {item}: {str(e)}"
 
 async def main():
